@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+    position:relative;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    /* display:table;  */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    /* ↓本を横並びにする */
+    /* display:table-cell; */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+textarea{
+    margin: 3%;
+    width: 95%;
+    height: 230px;
+    font-size:80%;
+    box-shadow: 3px 3px 3px 3px #555;
+}
+#bookResults{
+    display: flex;
+}
+#editButtons{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+.rearrangeButton{
+    background-color: #f6aa1e;
+    color: white;
+    text-align: right;
+}
