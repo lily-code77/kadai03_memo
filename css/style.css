@@ -1,20 +1,21 @@
 body{
-    margin:0;
+    margin:50px;
     padding:0;
     text-align:left;
     font-size: 32px;
 }
 header{
-    background-color: #fff;
+    background-image: url("../img/bookshelf.png");
+    opacity: 50%;
     border-bottom: 1px solid #ccc;
     text-align: center;
 }
 main{
     border-bottom:1px solid #ccc;
+    background-color: antiquewhite;
     position:relative;
 }
 footer{
-    background-color: #fff;
     border-bottom:1px solid #ccc;
     text-align: center;
 }
@@ -50,17 +51,39 @@ textarea{
     font-size:80%;
     box-shadow: 3px 3px 3px 3px #555;
 }
+.search{
+    padding-left: 200px;
+}
+#keyword{
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    padding-left: 10px;
+}
+#searchButton{
+    width: 80px;
+    height: 50px;
+    font-size: 30px;
+}
 #bookResults{
     display: flex;
+    padding-left: 200px;
 }
 #editButtons{
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-    padding-left: 50px;
+    padding-left: 45px;
 }
-.rearrangeButton{
-    background-color: #f6aa1e;
-    color: white;
-    text-align: right;
+#edit1, #edit2, #edit3{
+    width: 80px;
+    height: 45x;
+    font-size: 25px;
+}
+#save{
+    width: 80px;
+    height: 50px;
+    font-size: 30px;
+    margin-left: 1930px;
+    margin-bottom: 50px;
 }
