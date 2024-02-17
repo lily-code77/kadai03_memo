@@ -7,10 +7,10 @@ body{
 header{
     position: relative;
     z-index: 1;
+    width: 100%;
+    height: 200px;
     background-image: url("../img/bookshelf.png");
-    border-bottom: 1px solid #ccc;
     text-align: center;
-    padding-top: 20px;
 }
 header::after{
     content: "";
@@ -27,11 +27,15 @@ header>h1{
     position: relative;
     z-index: 3;
     color: #252d36;
+    font-size: 50px;
+    padding-top: 70px;
 }
 main{
     border-bottom:1px solid #ccc;
     background-color: antiquewhite;
     position:relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 footer{
     width: 100%;
@@ -41,12 +45,6 @@ footer{
     background-image: url("../img/bookshelf.png");
     border-bottom:1px solid #ccc;
     text-align: center;
-}
-p{
-    font-size:200%;
-    text-align: center;
-    border-bottom:1px solid #fff;
-    height:200px;
 }
 ul{
     padding: 0;
@@ -64,18 +62,18 @@ li{
     cursor: pointer;
 }
 li:hover{
-    background: #0066CC;
+    background: #f4c33a;
     color:#fff;
 }
-textarea{
-    margin: 3%;
-    width: 95%;
-    height: 230px;
-    font-size:80%;
-    box-shadow: 3px 3px 3px 3px #555;
+#kennsaku{
+    font-size: 60px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
 }
 .search{
-    padding-left: 200px;
+    padding-top: 10px;
+    padding-left: 300px;
 }
 #keyword{
     width: 300px;
@@ -87,26 +85,42 @@ textarea{
     width: 80px;
     height: 50px;
     font-size: 30px;
+    margin-left: 10px;
 }
 #bookResults{
     display: flex;
     padding-left: 200px;
 }
+#content{
+    font-size: 30px;
+    line-height: 50px;
+    margin-top: 20px;
+}
 #editButtons{
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-    padding-left: 45px;
+    /* padding-left: 45px; */
+    /* padding-top: 10px; */
+    margin-top: 8px;
+    margin-left: 20px;
 }
 #edit1, #edit2, #edit3{
     width: 80px;
     height: 45x;
     font-size: 25px;
 }
-#save{
+textarea {
+    margin: 3%;
+    width: 95%;
+    height: 230px;
+    font-size: 200%;
+    box-shadow: 3px 3px 3px 3px #555;
+}
+#save {
     width: 80px;
     height: 50px;
     font-size: 30px;
-    margin-left: 1930px;
+    margin-left: 95%;
     margin-bottom: 50px;
 }
