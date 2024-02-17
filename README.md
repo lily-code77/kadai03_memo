@@ -5,7 +5,7 @@
 - Google BooksのAPIから検索キーワードに基づく本を3つ抽出し、それぞれの本の概要（description）を編集し、その編集内容と履歴をLocal Storageに保存しておくことが出来る作品です。
 
 ## ③DEMO
-
+ https://lily-code77.github.io/kadai03_memo/
 
 ## ④工夫した点・こだわった点
 - どんな検索キーワードに対しても、APIから本を抽出出来るようにしたところ。
