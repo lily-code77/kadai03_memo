@@ -1,3 +1,18 @@
+// let url = "https://www.googleapis.com/books/v1/volumes?q="
+
+// url += $("#searchButton").on("click", function(){
+//     let element = document.getElementById("keyword");
+//     console.log(element.value);
+//     return element.value;
+// })
+// console.log("here");
+// console.log(searchWord);
+
+$("#searchButton").on("click", function(){
+    let element = document.getElementById("keyword");
+    console.log(element.value);
+    return element.value;
+})
 
 // ひとまず、q＝レシピだが、q=検索フォームに記載されたワードにしたい。
 $.getJSON("https://www.googleapis.com/books/v1/volumes?q=レシピ",
