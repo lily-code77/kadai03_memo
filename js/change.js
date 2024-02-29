@@ -23,6 +23,48 @@ $("#searchButton").on("click", function(){
     $("#edit1").html("編集");
     $("#edit2").html("編集");
     $("#edit3").html("編集");
+    $(function() {
+
+        $("#edit1").hover(function() {
+
+        // カーソルが当たった時の処理
+        $(this).css("background-color", "#f4c33a");
+
+        }, function() {
+
+        // カーソルが離れた時の処理
+        $(this).css("background-color", "antiquewhite");
+
+        });
+    });
+    $(function() {
+
+        $("#edit2").hover(function() {
+
+        // カーソルが当たった時の処理
+        $(this).css("background-color", "#f4c33a");
+
+        }, function() {
+
+        // カーソルが離れた時の処理
+        $(this).css("background-color", "antiquewhite");
+
+        });
+    });
+    $(function() {
+
+        $("#edit3").hover(function() {
+
+        // カーソルが当たった時の処理
+        $(this).css("background-color", "#f4c33a");
+
+        }, function() {
+
+        // カーソルが離れた時の処理
+        $(this).css("background-color", "antiquewhite");
+
+        });
+    });
     $("#memo").slideDown(500);
 });
 
