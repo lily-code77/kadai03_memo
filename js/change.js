@@ -20,6 +20,7 @@ $("#searchButton").on("click", function(){
     get(url);
 });
 
+let title = "";
 $("#edit1").on("click", function(){
     if (localStorage.getItem("memo_1")) {
         let key = `memo_${Object.keys(localStorage).length}`;
@@ -57,17 +58,18 @@ $("#edit2").on("click", function(){
     }
 });
 
+let title3 = "";
 $("#edit3").on("click", function(){
-    if (localStorage.getItem("memo_1")) {
-        let key = `memo_${Object.keys(localStorage).length}`;
+    if (localStorage.getItem(true)) {
+        let key = `title3_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
     else {
         $.getJSON(url, function (data) {
+            title3 = data.items[2].volumeInfo.title;
             let res = "";
-            res += "題名："
-            res += data.items[2].volumeInfo.title + "         ";
+            res += "3番目 "        
             res += "概要："
             res += data.items[2].volumeInfo.description
             $("#text_area").val(res);
@@ -78,10 +80,15 @@ $("#edit3").on("click", function(){
 let i = 1;
 $("#save").on("click", function(){
     const value = $("#text_area").val();
-    let key = `memo_${i}`;
-    localStorage.setItem(key, value);
-    i ++;
-    alert("保存されました");
+    
+    console.log(`value[0]:${value[0]}`);
+    if (value[0] == 3) {
+        let key = `${title3}_${i}`;
+        console.log({key});
+        localStorage.setItem(key, value);
+        i ++;
+        alert("保存されました");
+    };
 });
 
 // $("#clear").on("click", function(){
