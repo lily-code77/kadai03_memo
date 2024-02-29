@@ -61,10 +61,6 @@ li{
     /* display:table-cell; */
     cursor: pointer;
 }
-li:hover{
-    background: #f4c33a;
-    color:#fff;
-}
 #kennsaku{
     font-size: 60px;
     padding-top: 50px;
@@ -109,6 +105,20 @@ li:hover{
     width: 80px;
     height: 45x;
     font-size: 25px;
+}
+#edit1:hover {
+    background: #f4c33a;
+    color: #fff;
+}
+
+#edit2:hover {
+    background: #f4c33a;
+    color: #fff;
+}
+
+#edit3:hover {
+    background: #f4c33a;
+    color: #fff;
 }
 textarea {
     margin: 3%;
