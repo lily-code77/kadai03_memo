@@ -18,6 +18,10 @@ $("#searchButton").on("click", function(){
     url += element.value;
     // console.log(url);
     get(url);
+    $("#edit1").html("編集");
+    $("#edit2").html("編集");
+    $("#edit3").html("編集");
+    $("#memo").slideDown(500);
 });
 
 let title1 = "";

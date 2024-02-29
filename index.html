@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>original descriptions</title>
     <script src="js/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+    <title>original descriptions</title>
 </head>
 
 <body>
@@ -34,18 +37,20 @@
             <div id="bookResults">
                 <div id="content"></div>
                 <div id="editButtons">
-                    <button id="edit1">編集</button>
-                    <button id="edit2">編集</button>
-                    <button id="edit3">編集</button>
+                    <p id="edit1"></p>
+                    <p id="edit2"></p>
+                    <p id="edit3"></p>
                 </div>
             </div>
             
         </section>
 
         <!-- メモ帳 -->
-        <textarea id="text_area" cols="30" rows="10"></textarea>
-        <button id="save">Save</button>
-        
+        <section id="memo" style="display: none;">
+            <textarea id="text_area" cols="30" rows="10"></textarea>
+            <button id="save">Save</button>
+        </section>
+
     </main>
     
     <footer></footer>
