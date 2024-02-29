@@ -20,19 +20,18 @@ $("#searchButton").on("click", function(){
     get(url);
 });
 
-let title = "";
+let title1 = "";
 $("#edit1").on("click", function(){
-    if (localStorage.getItem("memo_1")) {
-        let key = `memo_${Object.keys(localStorage).length}`;
+    if (localStorage.getItem(true)) {
+        let key = `title1_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
     else {
         $.getJSON(url, function (data) {
+            title1 = data.items[0].volumeInfo.title;
             let res = "";
-            res += "題名："
-            res += data.items[0].volumeInfo.title + "         ";
-            // res += '<br>'
+            res += "1番目"
             res += "概要："
             res += data.items[0].volumeInfo.description
             $("#text_area").val(res);
@@ -40,17 +39,18 @@ $("#edit1").on("click", function(){
     }
 });
 
+let title2 = "";
 $("#edit2").on("click", function(){
-    if (localStorage.getItem("memo_1")) {
-        let key = `memo_${Object.keys(localStorage).length}`;
+    if (localStorage.getItem(true)) {
+        let key = `title2_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
     else {
         $.getJSON(url, function (data) {
+            title2 = data.items[1].volumeInfo.title;
             let res = "";
-            res += "題名："
-            res += data.items[1].volumeInfo.title + "         ";
+            res += "2番目"
             res += "概要："
             res += data.items[1].volumeInfo.description
             $("#text_area").val(res);
@@ -77,16 +77,32 @@ $("#edit3").on("click", function(){
     }
 });
 
-let i = 1;
+// let i = 1;
+let firstBookIndex = 1;
+let secondBookIndex = 1;
+let thirdBookIndex = 1;
 $("#save").on("click", function(){
     const value = $("#text_area").val();
     
-    console.log(`value[0]:${value[0]}`);
-    if (value[0] == 3) {
-        let key = `${title3}_${i}`;
+    if (value[0] == 1) {
+        let key = `${title1}_${firstBookIndex}`;
         console.log({key});
         localStorage.setItem(key, value);
-        i ++;
+        firstBookIndex ++;
+        alert("保存されました");
+    };
+    if (value[0] == 2) {
+        let key = `${title2}_${secondBookIndex}`;
+        console.log({key});
+        localStorage.setItem(key, value);
+        secondBookIndex ++;
+        alert("保存されました");
+    };
+    if (value[0] == 3) {
+        let key = `${title3}_${thirdBookIndex}`;
+        console.log({key});
+        localStorage.setItem(key, value);
+        thirdBookIndex ++;
         alert("保存されました");
     };
 });
