@@ -65,7 +65,7 @@ $("#searchButton").on("click", function(){
 
         });
     });
-    $("#memo").slideDown(500);
+    $("#memo").slideDown(1000);
 });
 
 let title1 = "";
