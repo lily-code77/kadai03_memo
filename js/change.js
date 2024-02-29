@@ -6,7 +6,9 @@ function get(str){$.getJSON(str,
         view += '<ul>';
         for (let i = 0; i < 3; i++) {
             let item = data.items[i];
-            view += '<li>題名：' + item.volumeInfo.title + '</li>';
+            // view += '<li>題名：' + item.volumeInfo.title + '</li>';
+            let num = i + 1;
+            view += '<li>' + num + '冊目：' + item.volumeInfo.title + '</li>';
         }
         view += '</ul>';
         $("#content").html(view);
@@ -35,7 +37,7 @@ $("#edit1").on("click", function(){
         $.getJSON(url, function (data) {
             title1 = data.items[0].volumeInfo.title;
             let res = "";
-            res += "1番目"
+            res += "1冊目   "
             res += "概要："
             res += data.items[0].volumeInfo.description
             $("#text_area").val(res);
@@ -54,7 +56,7 @@ $("#edit2").on("click", function(){
         $.getJSON(url, function (data) {
             title2 = data.items[1].volumeInfo.title;
             let res = "";
-            res += "2番目"
+            res += "2冊目"
             res += "概要："
             res += data.items[1].volumeInfo.description
             $("#text_area").val(res);
@@ -73,7 +75,7 @@ $("#edit3").on("click", function(){
         $.getJSON(url, function (data) {
             title3 = data.items[2].volumeInfo.title;
             let res = "";
-            res += "3番目 "        
+            res += "3冊目 "        
             res += "概要："
             res += data.items[2].volumeInfo.description
             $("#text_area").val(res);
