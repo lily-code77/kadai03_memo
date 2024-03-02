@@ -28,6 +28,7 @@ $("#searchButton").on("click", function(){
         $("#edit1").hover(function() {
 
         // カーソルが当たった時の処理
+        $(this).css("border-radius", "30%");
         $(this).css("background-color", "#f4c33a");
 
         }, function() {
@@ -42,6 +43,7 @@ $("#searchButton").on("click", function(){
         $("#edit2").hover(function() {
 
         // カーソルが当たった時の処理
+        $(this).css("border-radius", "30%");
         $(this).css("background-color", "#f4c33a");
 
         }, function() {
@@ -56,6 +58,7 @@ $("#searchButton").on("click", function(){
         $("#edit3").hover(function() {
 
         // カーソルが当たった時の処理
+        $(this).css("border-radius", "30%");
         $(this).css("background-color", "#f4c33a");
 
         }, function() {
@@ -65,11 +68,13 @@ $("#searchButton").on("click", function(){
 
         });
     });
-    $("#memo").slideDown(1000);
+    // $("#memo").slideDown(1000);
 });
 
 let title1 = "";
 $("#edit1").on("click", function(){
+    $("#memo").slideDown(1000);
+
     if (localStorage.getItem(true)) {
         let key = `title1_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
@@ -89,6 +94,8 @@ $("#edit1").on("click", function(){
 
 let title2 = "";
 $("#edit2").on("click", function(){
+    $("#memo").slideDown(1000);
+
     if (localStorage.getItem(true)) {
         let key = `title2_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
@@ -108,6 +115,8 @@ $("#edit2").on("click", function(){
 
 let title3 = "";
 $("#edit3").on("click", function(){
+    $("#memo").slideDown(1000);
+
     if (localStorage.getItem(true)) {
         let key = `title3_${Object.keys(localStorage).length}`;
         const value = localStorage.getItem(key);
