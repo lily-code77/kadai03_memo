@@ -85,7 +85,7 @@ $("#edit1").on("click", function(){
             title1 = data.items[0].volumeInfo.title;
             let res = "";
             res += "1冊目   "
-            res += "概要："
+            res += "   概要："
             res += data.items[0].volumeInfo.description
             $("#text_area").val(res);
         });
@@ -106,7 +106,7 @@ $("#edit2").on("click", function(){
             title2 = data.items[1].volumeInfo.title;
             let res = "";
             res += "2冊目"
-            res += "概要："
+            res += "   概要："
             res += data.items[1].volumeInfo.description
             $("#text_area").val(res);
         });
@@ -127,7 +127,7 @@ $("#edit3").on("click", function(){
             title3 = data.items[2].volumeInfo.title;
             let res = "";
             res += "3冊目 "        
-            res += "概要："
+            res += "   概要："
             res += data.items[2].volumeInfo.description
             $("#text_area").val(res);
         });
