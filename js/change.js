@@ -75,8 +75,11 @@ let title1 = "";
 $("#edit1").on("click", function(){
     $("#memo").slideDown(1000);
 
-    if (localStorage.getItem(true)) {
-        let key = `title1_${Object.keys(localStorage).length}`;
+    let indexOne = firstBookIndex - 1;
+    // console.log(`${title1}_${indexOne}`);
+    if (localStorage.getItem(`${title1}_${indexOne}`)) {
+        console.log("here");
+        let key = `${title1}_${indexOne}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
@@ -96,8 +99,9 @@ let title2 = "";
 $("#edit2").on("click", function(){
     $("#memo").slideDown(1000);
 
-    if (localStorage.getItem(true)) {
-        let key = `title2_${Object.keys(localStorage).length}`;
+    let indexTwo = secondBookIndex - 1;
+    if (localStorage.getItem(`${title2}_${indexTwo}`)) {
+        let key = `${title2}_${indexTwo}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
@@ -117,8 +121,9 @@ let title3 = "";
 $("#edit3").on("click", function(){
     $("#memo").slideDown(1000);
 
-    if (localStorage.getItem(true)) {
-        let key = `title3_${Object.keys(localStorage).length}`;
+    let indexThree = thirdBookIndex - 1;
+    if (localStorage.getItem(`${title3}_${indexThree}`)) {
+        let key = `${title3}_${indexThree}`;
         const value = localStorage.getItem(key);
         $("#text_area").val(value);
     }
@@ -143,21 +148,21 @@ $("#save").on("click", function(){
     
     if (value[0] == 1) {
         let key = `${title1}_${firstBookIndex}`;
-        console.log({key});
+        // console.log({key});
         localStorage.setItem(key, value);
         firstBookIndex ++;
         alert("保存されました");
     };
     if (value[0] == 2) {
         let key = `${title2}_${secondBookIndex}`;
-        console.log({key});
+        // console.log({key});
         localStorage.setItem(key, value);
         secondBookIndex ++;
         alert("保存されました");
     };
     if (value[0] == 3) {
         let key = `${title3}_${thirdBookIndex}`;
-        console.log({key});
+        // console.log({key});
         localStorage.setItem(key, value);
         thirdBookIndex ++;
         alert("保存されました");
